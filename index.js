@@ -13,6 +13,7 @@ function djb2(str){
 function to256ish(i) {
   // djb2 uses 33 as it's prime... should we then use k = 25 (coprime to 33),
   // m = 10 to get a 256ish number? k = 251 seems to work
+  // does k even need to be prime here?
   const k = 251
   const m = 1
 
