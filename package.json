@@ -1,0 +1,15 @@
+{
+  "name": "chromahash",
+  "version": "0.1.0",
+  "description": "Hash strings to colors",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Bowers <jonotron@gmail.com>",
+  "license": "MIT"
+}
