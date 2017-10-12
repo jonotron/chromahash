@@ -1,4 +1,4 @@
-const chalk = require('chalk')
+module.exports = chromahash
 
 function djb2(str){
     var hash = 5381;
@@ -13,19 +13,14 @@ function to256ish(i) {
   return (Math.abs(i) % 47) * 5 // almost 256
 }
 
+function toHex(d) {
+  return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
+}
+
 function chromahash(str) {
-  const r = to256ish(djb2('red' + str)).toString(16)
-  const g = to256ish(djb2('gre' + str)).toString(16)
-  const b = to256ish(djb2('blu' + str)).toString(16)
+  const r = toHex(to256ish(djb2('red' + str)))
+  const g = toHex(to256ish(djb2('gre' + str)))
+  const b = toHex(to256ish(djb2('blu' + str)))
 
   return `${r}${g}${b}`
 }
-
-const words = 'hello there how are you doing today and what other ' + 
-  'wonderful things can we accomplish today ' +
-  'we seem to not be able to generate different enough colors'
-
-words.split(' ').forEach(w => {
-  const hex = '#' + chromahash(w)
-  console.log(hex, chalk.bgHex(hex)(w))
-})
