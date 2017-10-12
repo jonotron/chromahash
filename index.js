@@ -10,7 +10,8 @@ function djb2(str){
 }
 
 function to256ish(i) {
-  return (Math.abs(i) % 47) * 5 // almost 256
+  //return (Math.abs(i) % 47) * 5 // almost 256
+  return (Math.abs(i) % 251)
 }
 
 function toHex(d) {
@@ -18,9 +19,13 @@ function toHex(d) {
 }
 
 function chromahash(str) {
-  const r = toHex(to256ish(djb2('red' + str)))
-  const g = toHex(to256ish(djb2('gre' + str)))
-  const b = toHex(to256ish(djb2('blu' + str)))
+  const rStr = 'red'
+  const gStr = 'green'
+  const bStr = 'blue'
 
-  return `${r}${g}${b}`
+  const rHex = toHex(to256ish(djb2(rStr + str)))
+  const gHex = toHex(to256ish(djb2(gStr + str)))
+  const bHex = toHex(to256ish(djb2(bStr + str)))
+
+  return `${rHex}${gHex}${bHex}`
 }
