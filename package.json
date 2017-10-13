@@ -7,10 +7,11 @@
   "devDependencies": {
     "chalk": "^2.1.0",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "prettier": "^1.7.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prettier": "prettier --write \"**/*.js\"",
     "pretest": "prettier --list-different \"**/*.js\"",
     "precommit": "npm run pretest" 
