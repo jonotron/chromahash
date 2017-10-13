@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/chromahash.svg)](https://npmjs.org/package/chromahash)
+
 # chromahash
 
 Hash strings into colors
