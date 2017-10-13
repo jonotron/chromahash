@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/jonotron/chromahash.svg)](https://travis-ci.org/jonotron/chromahash)
+[![Travis Build Status](https://travis-ci.org/jonotron/chromahash.svg?branch=master)](https://travis-ci.org/jonotron/chromahash)
 [![npm](https://img.shields.io/npm/v/chromahash.svg)](https://npmjs.org/package/chromahash)
 
 # chromahash
