@@ -14,7 +14,7 @@
     "test": "jest",
     "prettier": "prettier --write \"**/*.js\"",
     "pretest": "prettier --list-different \"**/*.js\"",
-    "precommit": "npm run pretest" 
+    "precommit": "npm run pretest"
   },
   "author": "Jonathan Bowers <jonotron@gmail.com>",
   "license": "MIT"
