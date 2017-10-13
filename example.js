@@ -1,7 +1,8 @@
 const chalk = require('chalk')
 const chromahash = require('./')
 
-const words = 'hello there how are you doing today and what other ' + 
+const words =
+  'hello there how are you doing today and what other ' +
   'wonderful things can we accomplish today ' +
   'we seem to not be able to generate different enough colors'
 
