@@ -16,6 +16,12 @@
     "pretest": "prettier --list-different \"**/*.js\"",
     "precommit": "npm run pretest"
   },
+  "repository": "https://github.com/jonotron/chromahash",
+  "bugs": "https://github.com/jontoron/chromahash/issues",
+  "keywords": ["color", "hash"],
+  "engines": {
+    "node": ">= 8.2"
+  },
   "author": "Jonathan Bowers <jonotron@gmail.com>",
   "license": "MIT"
 }
