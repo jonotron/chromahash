@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "chalk": "^2.1.0"
+    "chalk": "^2.1.0",
+    "prettier": "^1.7.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
