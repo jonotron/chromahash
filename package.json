@@ -1,6 +1,6 @@
 {
   "name": "chromahash",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hash strings to colors",
   "main": "index.js",
   "dependencies": {},
@@ -18,7 +18,10 @@
   },
   "repository": "https://github.com/jonotron/chromahash",
   "bugs": "https://github.com/jontoron/chromahash/issues",
-  "keywords": ["color", "hash"],
+  "keywords": [
+    "color",
+    "hash"
+  ],
   "engines": {
     "node": ">= 8.2"
   },
