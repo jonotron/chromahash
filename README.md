@@ -22,6 +22,6 @@ const rgbHex = chromahash('chromahash') // returns a rgb hex color
 * You can't be bothered to pre-associate words with colours
 
 Say you have a decentralized or offline application, and your users want to tag
-things and those tags should be have colours. Your users want these colours to
+things and those tags should have colours. Your users want these colours to
 be consistent across devices and for their friends. You need to hash the tags
 into colours... chromahash!
