@@ -1,12 +1,12 @@
+const words = require('an-array-of-english-words')
 const chalk = require('chalk')
 const chromahash = require('./')
 
-const words =
-  'hello there how are you doing today and what other ' +
-  'wonderful things can we accomplish today ' +
-  'we seem to not be able to generate different enough colors'
-
-words.split(' ').forEach(w => {
-  const hex = '#' + chromahash(w)
-  console.log(hex, chalk.bgHex(hex)(w))
-})
+Array(20)
+  .fill()
+  .forEach(() => {
+    const rand = Math.floor(Math.random() * 250000)
+    const word = words[rand]
+    const hex = '#' + chromahash(word)
+    console.log(hex, chalk.bgHex(hex)(word))
+  })
