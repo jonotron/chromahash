@@ -8,16 +8,17 @@
         font-weight: bold;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         border-radius: 7px;
-        display: block;
+        display: inline-block;
+        line-height: 40px;
         padding: 5px 8px;
+        margin: 3px 4px;
       }
     </style>
 
     <script src="./dist/chromahash.js"></script>
     <script type="text/javascript" defer>
-      function hashColour(e) {
+      function hashColour(string) {
         let examples = document.getElementById('examples')
-        let string = e.target.value
 
         let newExample = document.createElement('h2')
         newExample.innerText = string
@@ -29,9 +30,19 @@
   </head>
 
   <body>
-    <input type="text" placeholder="Hash..." onkeyup="hashColour(event)" />
-    <div id="examples">
-      <h2 id="example">Example</h2>
-    </div>
+    <input
+      type="text"
+      placeholder="Hash this..."
+      onkeyup="hashColour(event.target.value)"
+    />
+    <div id="examples"></div>
+
+    <script>
+      hashColour('Tags')
+      hashColour('More')
+      hashColour('Make')
+      hashColour('To')
+      hashColour('Write')
+    </script>
   </body>
 </html>
