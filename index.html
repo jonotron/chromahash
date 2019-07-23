@@ -17,6 +17,7 @@
         padding: 5px 8px;
         margin: 3px 4px;
         word-break: break-all;
+        color: #fff;
       }
 
       #examples {
@@ -28,6 +29,7 @@
     <script src="./dist/chromahash.js"></script>
     <script type="text/javascript" defer>
       function hashColour(string) {
+        string = string.strip()
         let examples = document.getElementById('examples')
 
         let newExample = document.createElement('h2')
