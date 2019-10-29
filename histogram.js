@@ -1,4 +1,4 @@
-const chromahash = require('./')
+const chromahash = require('./index.js')
 const words = require('an-array-of-english-words')
 const chalk = require('chalk')
 

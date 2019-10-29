@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Chroma Hash Example</title>
+  <head>
+    <title>Chroma Hash Example</title>
 
-<script src="./dist/chromahash.js"></script>
-</head>
+    <style>
+      body {
+        padding: 10%;
+      }
 
-<body>
+      h2 {
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 7px;
+        display: inline-block;
+        line-height: 40px;
+        padding: 5px 8px;
+        margin: 3px 4px;
+        word-break: break-all;
+        color: #fff;
+      }
 
-<p>Not much to see here yet, open your inspector and use chromahash() to try it out</p>
+      #examples {
+        padding-top: 30px;
+        overflow: hidden;
+      }
+    </style>
 
-</body>
+    <!-- <script src="./dist/chromahash.js"></script> -->
+    <script src="./index.js"></script>
+    <script type="text/javascript" defer>
+      function hashColour(string) {
+        let examples = document.getElementById('examples')
+
+        let newExample = document.createElement('h2')
+        newExample.innerText = string
+        newExample.style.background = '#' + chromahash(string)
+
+        examples.insertBefore(newExample, examples.childNodes[0])
+      }
+    </script>
+  </head>
+
+  <body>
+    <input
+      type="text"
+      placeholder="Hash this..."
+      onkeyup="hashColour(event.target.value)"
+    />
+    <div id="examples"></div>
+
+    <script>
+      hashColour('Tags')
+      hashColour('More')
+      hashColour('Make')
+      hashColour('To')
+      hashColour('Write')
+    </script>
+  </body>
 </html>
